@@ -7673,6 +7673,12 @@
     githubId = 1651325;
     name = "Malte Brandy";
   };
+  marble = {
+    email = "marble@hamburg.ccc.de";
+    github = "cyber-murmel";
+    githubId = 30078229;
+    name = "Markus Blechschmidt";
+  };
   marcweber = {
     email = "marco-oweber@gmx.de";
     github = "marcweber";

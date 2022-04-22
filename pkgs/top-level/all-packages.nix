@@ -18772,6 +18772,8 @@ with pkgs;
 
   liblinear = callPackage ../development/libraries/liblinear { };
 
+  liblms7002m = callPackage ../development/libraries/liblms7002m { };
+
   libmad = callPackage ../development/libraries/libmad { };
 
   llama = callPackage ../applications/misc/llama { };
@@ -19162,6 +19164,8 @@ with pkgs;
     udev = systemdMinimal;
   };
 
+  libusb3380 = callPackage ../development/libraries/libusb3380 { };
+
   libusbgx = callPackage ../development/libraries/libusbgx { };
 
   libusbmuxd = callPackage ../development/libraries/libusbmuxd { };
@@ -19305,6 +19309,12 @@ with pkgs;
   libwpe = callPackage ../development/libraries/libwpe { };
 
   libwpe-fdo = callPackage ../development/libraries/libwpe/fdo.nix { };
+
+  libxtrx = callPackage ../development/libraries/libxtrx { };
+
+  libxtrxdsp = callPackage ../development/libraries/libxtrxdsp { };
+
+  libxtrxll = callPackage ../development/libraries/libxtrxll { };
 
   libyaml = callPackage ../development/libraries/libyaml { };
 
