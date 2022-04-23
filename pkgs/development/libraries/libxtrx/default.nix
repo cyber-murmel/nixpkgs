@@ -31,6 +31,17 @@ stdenv.mkDerivation rec {
     soapysdr
   ];
 
+  fixupPhase = ''
+    runHook preFixup
+
+    mkdir $out/bin
+    for pkg in $out/lib/xtrx/*; do
+      ln -s $pkg $out/bin
+    done
+
+    runHook postFixup
+  '';
+
   meta = with lib; {
     homepage = "https://github.com/xtrx-sdr/libxtrx";
     description = "High-level XTRX API library";

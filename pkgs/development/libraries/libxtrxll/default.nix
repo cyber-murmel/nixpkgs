@@ -30,6 +30,17 @@ stdenv.mkDerivation rec {
     "-DUDEV_RULES_PATH=lib/udev/rules.d"
   ];
 
+  fixupPhase = ''
+    runHook preFixup
+
+    mkdir $out/bin
+    for pkg in $out/lib/xtrxll/*; do
+      ln -s $pkg $out/bin
+    done
+
+    runHook postFixup
+  '';
+
   meta = with lib; {
     homepage = "https://github.com/xtrx-sdr/libxtrxll";
     description = "Low-level XTRX hardware abstraction library";
