@@ -78,6 +78,8 @@ in mkDerivation {
     ]
   ;
 
+  patches = lib.optionals (version == "0.2.3") [ ./0000-xtrx-gr3_8.patch ];
+
   meta = with lib; {
     description = "Gnuradio block for OsmoSDR and rtl-sdr";
     homepage = "https://sdr.osmocom.org/trac/wiki/GrOsmoSDR";

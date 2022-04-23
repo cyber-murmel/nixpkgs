@@ -20492,6 +20492,7 @@ with pkgs;
   soapysdr-with-plugins = callPackage ../applications/radio/soapysdr {
     extraPackages = [
       limesuite
+      libxtrx
       soapyairspy
       soapyaudio
       soapybladerf
